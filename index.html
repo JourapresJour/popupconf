@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VideoO</title>
+</head>
+<body>
+    <section>
+        <h2>Vidéo demandée</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique vel odio possimus harum et minima laudantium recusandae nihil nulla nobis ullam a culpa provident omnis nostrum doloremque, itaque laborum exercitationem impedit. Libero dolorum possimus veritatis delectus, officia laboriosam incidunt tempore esse magni culpa ut qui officiis, ratione unde eius earum maxime facilis consectetur vero voluptas, sequi voluptatum. Vero voluptas, facilis atque, alias magni nemo dolores accusantium illum non, aut nam velit. Natus ea tempore, corrupti consequuntur esse voluptas nulla aliquam, doloremque consequatur odio nihil expedita facere non deserunt quae quis ducimus quo a omnis sapiente corporis possimus. Molestiae fuga perferendis, reprehenderit repellendus libero nostrum consectetur nesciunt ipsa voluptate corporis adipisci nemo repellat quam assumenda reiciendis in enim maiores mollitia magnam nulla? Repudiandae adipisci molestiae consectetur natus labore, quia quae placeat dignissimos nobis commodi, qui suscipit, modi dicta dolorem nam beatae pariatur quam minus incidunt praesentium? Laboriosam iure fugit iusto doloremque nisi deleniti ab itaque, doloribus aperiam voluptatem recusandae cum ullam labore, adipisci explicabo laudantium ratione! Dolorem velit et explicabo exercitationem voluptate quia commodi, doloremque placeat nulla aliquid blanditiis nisi porro id odio dolorum earum esse quae vero non facilis! Veritatis quos maxime nulla alias dignissimos error enim rem culpa?</p>
+        <button class="btn">CliQUE ICI</button>
+        <div class="popup">
+            <h2>Votre contenu va ici...</h2>
+            <b class="close">x</b>
+        </div>
+    </section>
+    <canvas id="my-canvas"></canvas>
+    <script src="index.min.js"></script>
+    <script>
+        let btn = document.querySelector('.btn');
+        let popup = document.querySelector('.popup');
+        let close = document.querySelector('.close');
+        let confettin = document.querySelector('#my-canvas');
+        btn.onclick = function(){
+            popup.classList.add('active');
+            confettin.classList.add('active');
+        }
+        close.onclick = function(){
+            popup.classList.remove('active');
+            confettin.classList.remove('active');
+        }
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script>
+</body>
+</html>
